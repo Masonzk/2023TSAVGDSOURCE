@@ -28,7 +28,7 @@ func get_color():
 	var operators = []
 	for num in range(expression.length()):
 		var character = expression[num]
-		if character == "*" or character == "+" or character == "-":
+		if character == "*" or character == "+" or character == "-" or character == "/":
 			operators.append(character)
 	print(operators)
 	if operators.size() > 1:
@@ -44,6 +44,9 @@ func get_color():
 		if operators[0] == "*":
 			#Times
 			return color_purple
+		if operators[0] == "/":
+			#Divide
+			return color_yellow
 	
 func _process(delta):
 	drag()
