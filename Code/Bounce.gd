@@ -9,14 +9,14 @@ var stored = true
 #export var visible_formula_change : String
 var expression : String = ""
 
-var color_red = Color("#d91657")
-var color_blue = Color("#30b0ff")
-var color_purple = Color("#9a2abf")
-var color_white = Color("#fff7f8")
-var color_green = Color("#5fb874")
-var color_yellow = Color("#ffcd75")
-var color_orange = Color("#eda95a")
-var color_brown = Color("#593b2a")
+export var color_red = Color("#d91657")
+export var color_blue = Color("#30b0ff")
+export var color_purple = Color("#9a2abf")
+export var color_white = Color("#fff7f8")
+export var color_green = Color("#5fb874")
+export var color_yellow = Color("#ffcd75")
+export var color_orange = Color("#eda95a")
+export var color_brown = Color("#593b2a")
 
 func _ready():
 	$Label.text = expression
