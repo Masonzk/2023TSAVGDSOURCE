@@ -17,7 +17,7 @@ centered = false
 margin_left = 64.0
 margin_top = 64.0
 margin_right = 256.0
-margin_bottom = 84.0
+margin_bottom = 85.0
 text = "DEMO LEVEL 1"
 
 [node name="Button2" type="Button" parent="."]
