@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Textures/background.png" type="Texture" id=2]
+[ext_resource path="res://Poppins-Black.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = SubResource( 2 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -59,10 +68,10 @@ margin_right = 896.0
 margin_bottom = 224.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 296.0
-margin_top = 72.0
-margin_right = 888.0
-margin_bottom = 216.0
+margin_left = 312.0
+margin_top = 80.0
+margin_right = 904.0
+margin_bottom = 285.0
 text = "DEMO INSTRUCTIONS
 
 Bouncers on side of screen contain values which will change the value of the ball.
@@ -79,6 +88,12 @@ margin_bottom = 712.0
 text = "Made in Godot 3.5.1"
 valign = 1
 autowrap = true
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 336.0
+margin_top = 328.0
+margin_right = 816.0
+margin_bottom = 440.0
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
