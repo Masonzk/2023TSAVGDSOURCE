@@ -16,6 +16,3 @@ polygon = PoolVector2Array( -686, -507, -564, -510, -560, -432, -693, -432 )
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" index="1"]
 polygon = PoolVector2Array( -687, -505, -564, -510, -559, -432, -693, -432 )
-
-[node name="Camera2D" parent="." index="4"]
-current = false

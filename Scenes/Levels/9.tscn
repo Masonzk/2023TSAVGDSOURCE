@@ -13,6 +13,7 @@ position = Vector2( 224, 384 )
 desired_value = 115.0
 
 [node name="Pass (x+10)" type="StaticBody2D" parent="." index="5"]
+modulate = Color( 0.372549, 0.721569, 0.454902, 0.392157 )
 position = Vector2( 448, 448 )
 __meta__ = {
 "_edit_group_": true
