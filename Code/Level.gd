@@ -21,7 +21,7 @@ func level_completed():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
-
+	
 func _process(delta):
 	#print($CanvasLayer/ColorRect/Bounce.position)
 	$Camera2D.zoom = lerp($Camera2D.zoom, zoom, 0.1)

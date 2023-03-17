@@ -62,47 +62,47 @@ margin_left = 264.0
 margin_top = 64.0
 margin_right = 456.0
 margin_bottom = 88.0
-text = "DEMO LEVEL 1"
+text = "DEMO LEVEL 6"
 
 [node name="Button7" type="Button" parent="."]
 margin_left = 264.0
 margin_top = 96.0
 margin_right = 456.0
 margin_bottom = 120.0
-text = "DEMO LEVEL 2"
+text = "DEMO LEVEL 7"
 
 [node name="Button8" type="Button" parent="."]
 margin_left = 264.0
 margin_top = 128.0
 margin_right = 456.0
 margin_bottom = 152.0
-text = "DEMO LEVEL 3"
+text = "DEMO LEVEL 8"
 
 [node name="Button9" type="Button" parent="."]
 margin_left = 264.0
 margin_top = 160.0
 margin_right = 456.0
 margin_bottom = 184.0
-text = "DEMO LEVEL 4"
+text = "DEMO LEVEL 9"
 
 [node name="Button10" type="Button" parent="."]
 margin_left = 264.0
 margin_top = 192.0
 margin_right = 456.0
 margin_bottom = 216.0
-text = "DEMO LEVEL 5"
+text = "DEMO LEVEL 10"
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 477.0
-margin_top = 72.0
-margin_right = 1085.0
-margin_bottom = 232.0
+margin_left = 472.0
+margin_top = 64.0
+margin_right = 1088.0
+margin_bottom = 216.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 487.0
-margin_top = 73.0
-margin_right = 1079.0
-margin_bottom = 278.0
+margin_left = 480.0
+margin_top = 72.0
+margin_right = 1080.0
+margin_bottom = 208.0
 text = "DEMO INSTRUCTIONS
 
 Bouncers on side of screen contain values which will change the value of the ball.
