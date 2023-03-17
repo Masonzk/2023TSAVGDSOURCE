@@ -14,13 +14,13 @@ expressions = [ "x+25", "x-30", "x-60", "x*20", "x*2", "x/35" ]
 position = Vector2( 1088, 128 )
 
 [node name="Collector" parent="." index="1"]
-position = Vector2( 216, 488 )
+position = Vector2( 216, 416 )
 desired_value = 4.0
 
 [node name="Null Zone" type="StaticBody2D" parent="." index="5"]
 modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
 material = SubResource( 1 )
-position = Vector2( 256, 576 )
+position = Vector2( 256, 504 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -39,7 +39,7 @@ polygon = PoolVector2Array( -128, -192, 256, -448, 256, -384, -128, -128 )
 
 [node name="Null Zone2" type="StaticBody2D" parent="." index="6"]
 modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
-position = Vector2( 384, 264 )
+position = Vector2( 384, 192 )
 rotation = -3.14159
 script = ExtResource( 4 )
 __meta__ = {
@@ -49,17 +49,17 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="Null Zone2" index="0"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Null Zone2/Area2D" index="0"]
-polygon = PoolVector2Array( -128, -128, 256, -384, 256, -448, -128, -192 )
+polygon = PoolVector2Array( -128, -128, 303.998, -416.001, 303.998, -480.001, -128, -192 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Null Zone2" index="1"]
 material = ExtResource( 3 )
 texture = ExtResource( 2 )
 texture_rotation_degrees = 70.0
-polygon = PoolVector2Array( -128, -192, 256, -448, 256, -384, -128, -128 )
+polygon = PoolVector2Array( -128, -192, 303.998, -480.001, 303.998, -416.001, -128, -128 )
 
 [node name="Null Zone3" type="StaticBody2D" parent="." index="7"]
 modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
-position = Vector2( 128, 544 )
+position = Vector2( 128, 472 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -68,13 +68,13 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="Null Zone3" index="0"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Null Zone3/Area2D" index="0"]
-polygon = PoolVector2Array( 0, 168, 0, -160, -48, -128, -48, 200 )
+polygon = PoolVector2Array( 0, 104, 0, -160, -48, -128, -48, 136 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Null Zone3" index="1"]
 material = ExtResource( 3 )
 texture = ExtResource( 2 )
 texture_rotation_degrees = 70.0
-polygon = PoolVector2Array( -48, 200, -48, -128, 0, -160, 0, 168 )
+polygon = PoolVector2Array( -48, 136, -48, -128, 0, -160, 0, 104 )
 
 [connection signal="body_entered" from="Null Zone/Area2D" to="Null Zone" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Null Zone2/Area2D" to="Null Zone2" method="_on_Area2D_body_entered"]
