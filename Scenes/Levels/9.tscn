@@ -18,6 +18,9 @@ position = Vector2( 1088, 320 )
 position = Vector2( 224, 384 )
 desired_value = 115.0
 
+[node name="ColorRect" parent="CanvasLayer" index="2"]
+color = Color( 0.109804, 0.109804, 0.109804, 1 )
+
 [node name="Passthrough" type="StaticBody2D" parent="." index="5"]
 position = Vector2( 448, 448 )
 script = ExtResource( 2 )
