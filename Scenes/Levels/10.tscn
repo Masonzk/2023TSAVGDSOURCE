@@ -3,3 +3,35 @@
 [ext_resource path="res://Scenes/Levels/Base.tscn" type="PackedScene" id=1]
 
 [node name="10" instance=ExtResource( 1 )]
+expressions = [ "x+25", "x-30", "x-60", "x*20", "x*2", "x/35" ]
+
+[node name="Emitter" parent="." index="0"]
+position = Vector2( 1152, 128 )
+
+[node name="Collector" parent="." index="1"]
+position = Vector2( 168, 520 )
+desired_value = 4.0
+
+[node name="Null Zone" type="StaticBody2D" parent="." index="5"]
+position = Vector2( 256, 576 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Null Zone" index="0"]
+polygon = PoolVector2Array( -128, -192, 256, -448, 256, -384, -128, -128 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Null Zone" index="1"]
+polygon = PoolVector2Array( -128, -128, 256, -384, 256, -448, -128, -192 )
+
+[node name="Null Zone2" type="StaticBody2D" parent="." index="6"]
+position = Vector2( 256, 840 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Null Zone2" index="0"]
+polygon = PoolVector2Array( -128, -192, 256, -448, 256, -384, -128, -128 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Null Zone2" index="1"]
+polygon = PoolVector2Array( -128, -128, 256, -384, 256, -448, -128, -192 )
