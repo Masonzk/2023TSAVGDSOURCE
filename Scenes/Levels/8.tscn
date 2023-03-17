@@ -17,9 +17,6 @@ default_value = 140.0
 position = Vector2( 640, 256 )
 desired_value = 427.0
 
-[node name="Camera2D" parent="." index="3"]
-current = false
-
 [node name="Null Zone" type="StaticBody2D" parent="." index="5"]
 modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
 position = Vector2( 192, 64 )
