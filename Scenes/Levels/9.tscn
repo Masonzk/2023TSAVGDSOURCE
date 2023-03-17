@@ -33,7 +33,7 @@ visible = false
 polygon = PoolVector2Array( 0, 832, 64, 832, 64, -960, 0, -960 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Passthrough" index="1"]
-color = Color( 0.109804, 0.109804, 0.109804, 1 )
+color = Color( 0.372549, 0.721569, 0.454902, 0.392157 )
 polygon = PoolVector2Array( 0, 832, 0, -960, 64, -960, 64, 832 )
 
 [node name="Label" type="Label" parent="Passthrough" index="2"]
