@@ -12,6 +12,7 @@ radius = 55.0
 
 [node name="Bounce" type="StaticBody2D" groups=["bounce"]]
 script = ExtResource( 2 )
+color_yellow = Color( 0.776471, 0.768627, 0.0980392, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.443137, 0.211765, 0.815686, 1 )

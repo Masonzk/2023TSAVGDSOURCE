@@ -37,16 +37,16 @@ func get_color():
 	else:
 		if operators[0] == "+":
 			#Plus
-			return color_red
+			return color_green
 		if operators[0] == "-":
 			#Minus
-			return color_blue
+			return color_red
 		if operators[0] == "*":
 			#Times
-			return color_purple
+			return color_blue
 		if operators[0] == "/":
 			#Divide
-			return color_yellow
+			return color_purple
 	
 func _process(delta):
 	drag()
