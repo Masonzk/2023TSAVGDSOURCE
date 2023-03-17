@@ -34,7 +34,6 @@ margin_left = 64.0
 margin_top = 96.0
 margin_right = 256.0
 margin_bottom = 116.0
-disabled = true
 text = "DEMO LEVEL 2"
 
 [node name="Button3" type="Button" parent="."]
@@ -42,7 +41,6 @@ margin_left = 64.0
 margin_top = 128.0
 margin_right = 256.0
 margin_bottom = 148.0
-disabled = true
 text = "DEMO LEVEL 3"
 
 [node name="Button4" type="Button" parent="."]
@@ -50,7 +48,6 @@ margin_left = 64.0
 margin_top = 160.0
 margin_right = 256.0
 margin_bottom = 180.0
-disabled = true
 text = "DEMO LEVEL 4"
 
 [node name="Button5" type="Button" parent="."]
@@ -58,20 +55,54 @@ margin_left = 64.0
 margin_top = 192.0
 margin_right = 256.0
 margin_bottom = 212.0
-disabled = true
+text = "DEMO LEVEL 5"
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 64.0
+margin_right = 456.0
+margin_bottom = 88.0
+text = "DEMO LEVEL 1"
+
+[node name="Button7" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 96.0
+margin_right = 456.0
+margin_bottom = 120.0
+text = "DEMO LEVEL 2"
+
+[node name="Button8" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 128.0
+margin_right = 456.0
+margin_bottom = 152.0
+text = "DEMO LEVEL 3"
+
+[node name="Button9" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 160.0
+margin_right = 456.0
+margin_bottom = 184.0
+text = "DEMO LEVEL 4"
+
+[node name="Button10" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 192.0
+margin_right = 456.0
+margin_bottom = 216.0
 text = "DEMO LEVEL 5"
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 288.0
-margin_top = 64.0
-margin_right = 896.0
-margin_bottom = 224.0
+margin_left = 477.0
+margin_top = 72.0
+margin_right = 1085.0
+margin_bottom = 232.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 312.0
-margin_top = 80.0
-margin_right = 904.0
-margin_bottom = 285.0
+margin_left = 487.0
+margin_top = 73.0
+margin_right = 1079.0
+margin_bottom = 278.0
 text = "DEMO INSTRUCTIONS
 
 Bouncers on side of screen contain values which will change the value of the ball.
@@ -89,14 +120,13 @@ text = "Made in Godot 3.5.1"
 valign = 1
 autowrap = true
 
-[node name="Button6" type="Button" parent="."]
-margin_left = 336.0
-margin_top = 328.0
-margin_right = 816.0
-margin_bottom = 440.0
-
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_Button8_pressed"]
+[connection signal="pressed" from="Button9" to="." method="_on_Button9_pressed"]
+[connection signal="pressed" from="Button10" to="." method="_on_Button10_pressed"]
