@@ -3,3 +3,34 @@
 [ext_resource path="res://Scenes/Levels/Base.tscn" type="PackedScene" id=1]
 
 [node name="7" instance=ExtResource( 1 )]
+expressions = [ "x*7", "x*3", "x*10", "x+5", "x-4", "x/4" ]
+
+[node name="Emitter" parent="." index="0"]
+position = Vector2( 1088, 256 )
+
+[node name="Collector" parent="." index="1"]
+desired_value = 935.0
+
+[node name="Left Wall" type="StaticBody2D" parent="." index="5"]
+position = Vector2( 336, 608 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Left Wall" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, -192, 32, -192, 32, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left Wall" index="1"]
+polygon = PoolVector2Array( 0, 0, 32, 0, 32, -192, 0, -192 )
+
+[node name="Right Wall" type="StaticBody2D" parent="." index="6"]
+position = Vector2( 144, 608 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Right Wall" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, -192, 32, -192, 32, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right Wall" index="1"]
+polygon = PoolVector2Array( 0, 0, 32, 0, 32, -192, 0, -192 )
