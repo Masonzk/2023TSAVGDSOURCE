@@ -64,6 +64,7 @@ func drag():
 			scale = Vector2(1, 1)
 			global_position = get_global_mouse_position()
 			self.set_owner(root)
+			stored = false
 	#Setdown
 	if Input.is_action_just_released("mouse_left") and held:
 		held = false
@@ -77,7 +78,7 @@ func drag():
 		#global_position = get_global_mouse_position()
 	#Enable/disable collision based on overlapping.
 	else:
-		if $Area2D.get_overlapping_bodies() == []:
+		if $Area2D.get_overlapping_bodies() == [] and !stored:
 			$CollisionShape2D.disabled = false
 		else:
 			for body in $Area2D.get_overlapping_bodies():
