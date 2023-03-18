@@ -9,7 +9,7 @@ size = 24
 font_data = ExtResource( 3 )
 
 [node name="4" instance=ExtResource( 1 )]
-expressions = [ "x+31", "x*2", "x*3", "x-6", "x+27" ]
+expressions = [ "x+60", "x/2", "x*3", "x-5", "x+27" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -38,7 +38,7 @@ default_value = 7.0
 
 [node name="Collector" parent="." index="2"]
 position = Vector2( 1088, 136 )
-desired_value = 45.0
+desired_value = 69.0
 
 [node name="Passthrough" type="StaticBody2D" parent="." index="6"]
 position = Vector2( 416, 448 )
@@ -47,7 +47,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
-formula = "x+10"
+formula = "x*2"
 
 [node name="Area2D" type="Area2D" parent="Passthrough" index="0"]
 
@@ -65,8 +65,8 @@ margin_right = 64.0
 margin_bottom = 272.0
 custom_fonts/font = SubResource( 1 )
 text = "x
-+
-10"
+*
+2"
 align = 1
 valign = 1
 
