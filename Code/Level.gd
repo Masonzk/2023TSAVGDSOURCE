@@ -6,6 +6,8 @@ export var expressions : Array
 var bouncer = preload("res://Scenes/Bounce.tscn")
 onready var storage = $CanvasLayer/ColorRect
 
+export var hint_value : String = ""
+
 func _ready():
 	var x = 0
 	for formula in expressions:
@@ -45,3 +47,7 @@ func _on_ZoomInButton_pressed():
 
 func _on_ZoomOutButton_pressed():
 	zoom += Vector2(0.25, 0.25)
+
+
+func _on_HintButton_pressed():
+	$CanvasLayer/HintLabel.visible = true

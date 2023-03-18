@@ -129,6 +129,24 @@ margin_bottom = 712.0
 theme = ExtResource( 8 )
 text = "-"
 
+[node name="HintButton" type="Button" parent="CanvasLayer"]
+margin_left = 992.0
+margin_top = 672.0
+margin_right = 1024.0
+margin_bottom = 704.0
+theme = ExtResource( 8 )
+text = "?"
+
+[node name="HintLabel" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 904.0
+margin_top = 672.0
+margin_right = 984.0
+margin_bottom = 704.0
+text = "3 bumpers"
+align = 2
+valign = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="CanvasLayer/CanvasLayer"]
@@ -168,4 +186,5 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZoomInButton" to="." method="_on_ZoomInButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZoomOutButton" to="." method="_on_ZoomOutButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/HintButton" to="." method="_on_HintButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/CanvasLayer/Panel/Button" to="." method="_on_Button_pressed"]
