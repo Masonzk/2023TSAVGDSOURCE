@@ -77,7 +77,7 @@ func drag():
 	
 	if Input.is_action_just_pressed("mouse_right") and mouse_in and !held and !stored:
 		#Spawn trash icon
-		Input.set_custom_mouse_cursor(trash_icon)
+		Input.set_custom_mouse_cursor(trash_icon, 0, Vector2(12, 12))
 		trashing = true
 	if Input.is_action_just_released("mouse_right") and trashing:
 		#Trash shit

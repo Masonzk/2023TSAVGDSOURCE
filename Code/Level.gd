@@ -22,6 +22,14 @@ func level_completed():
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	
+func respawn(expression):
+	var pos = expressions.find(expression, 0)
+	var instance = bouncer.instance()
+	instance.position = Vector2(16, 608-pos*92)
+	instance.expression = expression
+	instance.scale = Vector2(0.75, 0.75)
+	storage.add_child(instance)
+	
 func _process(delta):
 	#print($CanvasLayer/ColorRect/Bounce.position)
 	$Camera2D.zoom = lerp($Camera2D.zoom, zoom, 0.1)
