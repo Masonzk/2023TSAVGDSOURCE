@@ -132,6 +132,7 @@ text = "-"
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="CanvasLayer/CanvasLayer"]
+visible = false
 margin_left = 384.0
 margin_top = 128.0
 margin_right = 896.0

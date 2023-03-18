@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Levels/Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Code/Passthrough.gd" type="Script" id=2]
+[ext_resource path="res://NotoSans-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
 
 [node name="4" instance=ExtResource( 1 )]
 expressions = [ "x+31", "x*2", "x*3", "x-6", "x+27" ]
@@ -34,8 +40,34 @@ default_value = 7.0
 position = Vector2( 1088, 136 )
 desired_value = 45.0
 
-[node name="x+10" type="Polygon2D" parent="." index="6"]
-polygon = PoolVector2Array( 128, -64, 632, 768, 704, 768, 465.805, 374.79, 200, -64 )
+[node name="Passthrough" type="StaticBody2D" parent="." index="6"]
+position = Vector2( 416, 448 )
+rotation = -0.523598
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+formula = "x+10"
+
+[node name="Area2D" type="Area2D" parent="Passthrough" index="0"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Passthrough/Area2D" index="0"]
+visible = false
+polygon = PoolVector2Array( 0, 832, 64, 832, 64, -960, 0, -960 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Passthrough" index="1"]
+color = Color( 0.85098, 0.0862745, 0.341176, 0.392157 )
+polygon = PoolVector2Array( 0, 832, 0, -960, 64, -960, 64, 832 )
+
+[node name="Label" type="Label" parent="Passthrough" index="2"]
+margin_top = -448.0
+margin_right = 64.0
+margin_bottom = 272.0
+custom_fonts/font = SubResource( 1 )
+text = "x
++
+10"
+align = 1
+valign = 1
+
+[connection signal="body_entered" from="Passthrough/Area2D" to="Passthrough" method="_on_Area2D_body_entered"]
