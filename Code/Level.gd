@@ -30,6 +30,7 @@ func _process(delta):
 	#$ColorRect.rect_position.x = -(1280*(zoom.x-1)) / 2
 	
 func respawn(expression):
+	pass
 	
 func _on_ZoomInButton_pressed():
 	zoom -= Vector2(0.25, 0.25)
