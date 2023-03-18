@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Emitter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Chalkboard.tscn" type="PackedScene" id=2]
@@ -7,8 +7,30 @@
 [ext_resource path="res://Scenes/Walls.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Shaders/main.tres" type="Theme" id=8]
 
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.495454 ), -1.62764, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.165385, 0.334615, 0.503846, 0.769231 )
+colors = PoolColorArray( 1, 0.968627, 0.972549, 1, 0.85098, 0.0862745, 0.341176, 1, 0.188235, 0.690196, 1, 1, 0.372549, 0.721569, 0.454902, 1, 0.603922, 0.164706, 0.74902, 1 )
+
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0705882, 0.0705882, 0.0705882, 0.784314 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0546875, 0.0546875, 0.0546875, 0.882353 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Base" type="Node2D"]
 script = ExtResource( 4 )
@@ -61,6 +83,24 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer"]
+position = Vector2( 640, 0 )
+emitting = false
+amount = 256
+lifetime = 8.0
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 640, 0 )
+direction = Vector2( 0, 1 )
+spread = 20.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 250.0
+initial_velocity_random = 0.25
+scale_amount = 10.0
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+
 [node name="Button" type="Button" parent="CanvasLayer"]
 margin_left = 1184.0
 margin_top = 664.0
@@ -88,6 +128,41 @@ margin_right = 1096.0
 margin_bottom = 712.0
 theme = ExtResource( 8 )
 text = "-"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="CanvasLayer/CanvasLayer"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 896.0
+margin_bottom = 320.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="CanvasLayer/CanvasLayer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 0.458333
+theme = ExtResource( 8 )
+text = "LEVEL COMPLETED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/CanvasLayer/Panel"]
+anchor_left = 0.375
+anchor_top = 0.458333
+anchor_right = 0.625
+anchor_bottom = 0.791667
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+text = "MENU"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZoomInButton" to="." method="_on_ZoomInButton_pressed"]

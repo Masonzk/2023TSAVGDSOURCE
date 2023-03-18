@@ -15,9 +15,12 @@ func _ready():
 		instance.scale = Vector2(0.75, 0.75)
 		storage.add_child(instance)
 		x += 92
+	$CanvasLayer/CanvasLayer/Panel.visible = false
 		
 func level_completed():
 	print("level completed")
+	$CanvasLayer/CPUParticles2D.emitting = true
+	$CanvasLayer/CanvasLayer/Panel.visible = true
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
