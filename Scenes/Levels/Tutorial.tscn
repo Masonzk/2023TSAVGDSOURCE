@@ -10,6 +10,9 @@ expressions = [ "x+2", "x-2", "x*2", "x/5" ]
 [node name="Collector" parent="." index="1"]
 desired_value = 4.0
 
+[node name="Camera2D" parent="." index="3"]
+current = false
+
 [node name="Label" type="Label" parent="CanvasLayer" index="6"]
 margin_left = 1120.0
 margin_top = 88.0
@@ -21,9 +24,9 @@ valign = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer" index="7"]
 margin_left = 1024.0
-margin_top = 624.0
+margin_top = 632.0
 margin_right = 1176.0
-margin_bottom = 656.0
+margin_bottom = 664.0
 theme = ExtResource( 2 )
 text = "CAMERA CONTROLS"
 align = 1
