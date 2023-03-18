@@ -6,10 +6,13 @@ var held = false
 var stored = true
 
 var in_trash = false
+var trashing = false
 
 #export var formula_change : Dictionary
 #export var visible_formula_change : String
 var expression : String = ""
+
+var trash_icon = preload("res://Textures/trash_icon.png")
 
 export var color_red = Color("#d91657")
 export var color_blue = Color("#30b0ff")
@@ -55,7 +58,7 @@ func _process(delta):
 
 func drag():
 	#Pickup
-	if Input.is_action_just_pressed("mouse_left") and mouse_in and !Globals.holding:
+	if Input.is_action_just_pressed("mouse_left") and mouse_in and !Globals.holding and !trashing:
 		held = true
 		Globals.holding = true
 		$CollisionShape2D.disabled = true
@@ -72,9 +75,15 @@ func drag():
 		held = false
 		Globals.holding = false
 	
-	if Input.is_action_just_pressed("mouse_right") and mouse_in and !held:
+	if Input.is_action_just_pressed("mouse_right") and mouse_in and !held and !stored:
 		#Spawn trash icon
-		pass
+		Input.set_custom_mouse_cursor(trash_icon)
+		trashing = true
+	if Input.is_action_just_released("mouse_right") and trashing:
+		#Trash shit
+		Input.set_custom_mouse_cursor(null)
+		get_parent().respawn(expression)
+		queue_free()
 	
 	#Track mouse position
 	if held:
