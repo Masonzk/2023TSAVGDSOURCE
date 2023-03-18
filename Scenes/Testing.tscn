@@ -17,35 +17,18 @@ default_value = 15.0
 
 [node name="Bounce" parent="." instance=ExtResource( 2 )]
 position = Vector2( 952, 96 )
-formula_change = {
-"*": 2.0,
-"+": 5.0
-}
-visible_formula_change = "2x + 5"
 
 [node name="Bounce2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 952, 208 )
 constant_linear_velocity = Vector2( 0, -0.005 )
-formula_change = {
-"*": 2.0
-}
-visible_formula_change = "2x"
 
 [node name="Bounce3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 952, 320 )
 constant_linear_velocity = Vector2( 0, -0.005 )
-formula_change = {
-"*": 0.5
-}
-visible_formula_change = "0.5x"
 
 [node name="Bounce4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 952, 432 )
 constant_linear_velocity = Vector2( 0, -0.005 )
-formula_change = {
-"*": 10.0
-}
-visible_formula_change = "10x"
 
 [node name="Collector" parent="." instance=ExtResource( 4 )]
 position = Vector2( 800, 112 )

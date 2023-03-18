@@ -40,6 +40,7 @@ polygon = PoolVector2Array( 32, 0, 320, 0, 320, 128, 32, 128 )
 [node name="Null Zone2" type="StaticBody2D" parent="." index="6"]
 modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
 position = Vector2( 832, 64 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -56,3 +57,4 @@ texture_rotation_degrees = 70.0
 polygon = PoolVector2Array( 0, 0, 256, 0, 256, 544, 0, 544 )
 
 [connection signal="body_entered" from="Null Zone/Area2D" to="Null Zone" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Null Zone2/Area2D" to="Null Zone2" method="_on_Area2D_body_entered"]

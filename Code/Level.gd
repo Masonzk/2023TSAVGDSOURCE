@@ -17,6 +17,7 @@ func _ready():
 		instance.scale = Vector2(0.75, 0.75)
 		storage.add_child(instance)
 		x += 92
+	$CanvasLayer/HintLabel.text = hint_value
 	$CanvasLayer/CanvasLayer/Panel.visible = false
 	
 func level_completed():
