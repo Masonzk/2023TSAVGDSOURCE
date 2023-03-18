@@ -150,7 +150,6 @@ valign = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="CanvasLayer/CanvasLayer"]
-visible = false
 margin_left = 384.0
 margin_top = 128.0
 margin_right = 896.0
@@ -169,9 +168,9 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer/CanvasLayer/Panel"]
-anchor_left = 0.375
+anchor_left = 0.234375
 anchor_top = 0.458333
-anchor_right = 0.625
+anchor_right = 0.484375
 anchor_bottom = 0.791667
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
@@ -183,8 +182,24 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="Button2" type="Button" parent="CanvasLayer/CanvasLayer/Panel"]
+anchor_left = 0.515625
+anchor_top = 0.458333
+anchor_right = 0.765625
+anchor_bottom = 0.791667
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+text = "NEXT"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZoomInButton" to="." method="_on_ZoomInButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZoomOutButton" to="." method="_on_ZoomOutButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/HintButton" to="." method="_on_HintButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/CanvasLayer/Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/Panel/Button2" to="." method="_on_Button2_pressed"]

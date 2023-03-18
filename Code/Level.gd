@@ -52,3 +52,7 @@ func _on_ZoomOutButton_pressed():
 
 func _on_HintButton_pressed():
 	$CanvasLayer/HintLabel.visible = true
+	
+func _on_Button2_pressed():
+	Globals.current_level += 1
+	get_tree().change_scene("res://Scenes/Levels/" + str(Globals.levels[Globals.current_level]) + ".tscn")
