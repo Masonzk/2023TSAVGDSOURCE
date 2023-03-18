@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Levels/Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Code/Passthrough.gd" type="Script" id=2]
 [ext_resource path="res://NotoSans-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Shaders/Null-Zone.tres" type="Material" id=4]
+[ext_resource path="res://Code/NullZone.gd" type="Script" id=5]
+[ext_resource path="res://Textures/d141efea9db2f0fa9948b1fbf2419d7f.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -18,7 +21,26 @@ position = Vector2( 1088, 320 )
 position = Vector2( 224, 384 )
 desired_value = 115.0
 
-[node name="Passthrough" type="StaticBody2D" parent="." index="5"]
+[node name="Null Zone" type="StaticBody2D" parent="." index="5"]
+modulate = Color( 0.94902, 0.0941176, 0.0941176, 0.431373 )
+position = Vector2( 544, 128 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Null Zone" index="0"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Null Zone/Area2D" index="0"]
+polygon = PoolVector2Array( -288, 0, 320, 0, 320, 128, -288, 128 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Null Zone" index="1"]
+material = ExtResource( 4 )
+texture = ExtResource( 6 )
+texture_rotation_degrees = 70.0
+polygon = PoolVector2Array( -288, 0, 320, 0, 320, 128, -288, 128 )
+
+[node name="Passthrough" type="StaticBody2D" parent="." index="6"]
 position = Vector2( 448, 448 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -47,4 +69,5 @@ text = "x
 align = 1
 valign = 1
 
+[connection signal="body_entered" from="Null Zone/Area2D" to="Null Zone" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Passthrough/Area2D" to="Passthrough" method="_on_Area2D_body_entered"]
