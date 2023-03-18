@@ -32,8 +32,9 @@ text = "CAMERA CONTROLS"
 align = 1
 valign = 1
 
-[node name="Button" parent="CanvasLayer/CanvasLayer/Panel" index="1"]
-theme = null
+[node name="Panel" parent="CanvasLayer/CanvasLayer" index="0"]
+margin_top = 288.0
+margin_bottom = 480.0
 
 [node name="Label4" type="Label" parent="." index="5"]
 margin_left = 176.0
