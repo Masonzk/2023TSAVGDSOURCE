@@ -5,6 +5,8 @@ var held = false
 
 var stored = true
 
+var in_trash = false
+
 #export var formula_change : Dictionary
 #export var visible_formula_change : String
 var expression : String = ""
@@ -69,6 +71,10 @@ func drag():
 	if Input.is_action_just_released("mouse_left") and held:
 		held = false
 		Globals.holding = false
+		if in_trash:
+			get_parent().get_parent().get_parent().respawn_ball(expression)
+			$AnimationPlayer.play("destroy")
+			queue_free()
 	
 	#Track mouse position
 	if held:
