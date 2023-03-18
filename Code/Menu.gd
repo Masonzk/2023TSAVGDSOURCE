@@ -29,3 +29,7 @@ func _on_Button9_pressed():
 
 func _on_Button10_pressed():
 	get_tree().change_scene("res://Scenes/Levels/10.tscn")
+
+
+func _on_Button11_pressed():
+	get_tree().change_scene("res://Scenes/Levels/Tutorial.tscn")

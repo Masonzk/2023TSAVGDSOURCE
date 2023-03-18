@@ -16,81 +16,89 @@ color = Color( 0.109804, 0.109804, 0.109804, 1 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 64.0
-margin_right = 256.0
-margin_bottom = 104.0
-custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
-text = "LEVEL 1"
-
-[node name="Button2" type="Button" parent="."]
-margin_left = 64.0
 margin_top = 112.0
 margin_right = 256.0
 margin_bottom = 152.0
+custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
+text = "LEVEL 1"
+
+[node name="Button11" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 456.0
+margin_bottom = 104.0
+custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
+text = "TUTORIAL"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 160.0
+margin_right = 256.0
+margin_bottom = 200.0
 custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
 text = "LEVEL 2"
 
 [node name="Button3" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 160.0
+margin_top = 208.0
 margin_right = 256.0
-margin_bottom = 191.0
+margin_bottom = 239.0
 custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
 text = "LEVEL 3"
 
 [node name="Button4" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 200.0
+margin_top = 248.0
 margin_right = 256.0
-margin_bottom = 239.0
+margin_bottom = 287.0
 custom_colors/font_color = Color( 0.372549, 0.721569, 0.454902, 1 )
 text = "LEVEL 4"
 
 [node name="Button5" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 248.0
+margin_top = 296.0
 margin_right = 256.0
-margin_bottom = 288.0
+margin_bottom = 336.0
 custom_colors/font_color = Color( 0.929412, 0.662745, 0.352941, 1 )
 text = "LEVEL 5"
 
 [node name="Button6" type="Button" parent="."]
 margin_left = 264.0
-margin_top = 64.0
+margin_top = 112.0
 margin_right = 456.0
-margin_bottom = 104.0
+margin_bottom = 152.0
 custom_colors/font_color = Color( 0.929412, 0.662745, 0.352941, 1 )
 text = "LEVEL 6"
 
 [node name="Button7" type="Button" parent="."]
 margin_left = 264.0
-margin_top = 112.0
+margin_top = 160.0
 margin_right = 456.0
-margin_bottom = 152.0
+margin_bottom = 200.0
 custom_colors/font_color = Color( 0.929412, 0.662745, 0.352941, 1 )
 text = "LEVEL 7"
 
 [node name="Button8" type="Button" parent="."]
 margin_left = 264.0
-margin_top = 160.0
+margin_top = 208.0
 margin_right = 456.0
-margin_bottom = 192.0
+margin_bottom = 240.0
 custom_colors/font_color = Color( 0.85098, 0.0862745, 0.341176, 1 )
 text = "LEVEL 8"
 
 [node name="Button9" type="Button" parent="."]
 margin_left = 264.0
-margin_top = 200.0
+margin_top = 248.0
 margin_right = 456.0
-margin_bottom = 240.0
+margin_bottom = 288.0
 custom_colors/font_color = Color( 0.85098, 0.0862745, 0.341176, 1 )
 text = "LEVEL 9"
 
 [node name="Button10" type="Button" parent="."]
 margin_left = 264.0
-margin_top = 248.0
+margin_top = 296.0
 margin_right = 456.0
-margin_bottom = 288.0
+margin_bottom = 336.0
 custom_colors/font_color = Color( 0.85098, 0.0862745, 0.341176, 1 )
 text = "LEVEL 10"
 
@@ -123,6 +131,7 @@ valign = 1
 autowrap = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button11" to="." method="_on_Button11_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
