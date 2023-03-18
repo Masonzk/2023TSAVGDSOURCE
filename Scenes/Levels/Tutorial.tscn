@@ -59,14 +59,18 @@ align = 1
 valign = 1
 
 [node name="Label5" type="Label" parent="." index="7"]
-margin_left = 128.0
-margin_top = 128.0
-margin_right = 716.0
-margin_bottom = 203.0
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 652.0
+margin_bottom = 139.0
 theme = ExtResource( 2 )
-text = "Balls start at the emitter with a specified value.
-Use the bouncers in the storage (LEFT MOUSE) to modify the value of the ball.
-Force ball into the collection zone as corresponding value to complete level."
+text = "-Balls start at the emitter with a specified value.
+
+-Use the bouncers in the storage (LEFT MOUSE) to modify the value of the ball.
+
+-Reset ball position with RIGHT MOUSE
+
+-Force ball into the collection zone as corresponding value to complete level."
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="." index="8"]

@@ -5,13 +5,10 @@
 [node name="1" instance=ExtResource( 1 )]
 expressions = [ "x+2", "x+5", "x-6", "x*3" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
-
-[node name="Emitter" parent="." index="1"]
+[node name="Emitter" parent="." index="0"]
 position = Vector2( 992, 224 )
-emit_speed = 300.0
 default_value = 3.0
 
-[node name="Collector" parent="." index="2"]
+[node name="Collector" parent="." index="1"]
 position = Vector2( 192, 512 )
 desired_value = 10.0
