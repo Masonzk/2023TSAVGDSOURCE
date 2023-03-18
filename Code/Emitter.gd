@@ -14,6 +14,9 @@ func _ready():
 	$Timer.start()
 	var angle = ((get_global_position() - emit_direction) - get_global_position()).angle()
 	$Sprite.rotation = angle
+	$Sprite/Button/Label.text = str(default_value)
+	#$Sprite/Label.rect_rotation = -rad2deg(angle) #rad2deg(get_angle_to(Vector2.UP))
+	$Sprite/Button.rect_rotation = -rad2deg(angle)
 	#$Sprite.look_at(emit_direction)
 	
 func _on_Timer_timeout():

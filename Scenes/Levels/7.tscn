@@ -4,6 +4,7 @@
 
 [node name="7" instance=ExtResource( 1 )]
 expressions = [ "x+5", "x-4", "x*10", "x*7", "x*3", "x/4" ]
+hint_value = "5 BUMPERS"
 
 [node name="Emitter" parent="." index="0"]
 position = Vector2( 1088, 256 )

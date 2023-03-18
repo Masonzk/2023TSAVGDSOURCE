@@ -18,7 +18,7 @@ func _ready():
 		storage.add_child(instance)
 		x += 92
 	$CanvasLayer/CanvasLayer/Panel.visible = false
-		
+	
 func level_completed():
 	print("level completed")
 	$CanvasLayer/CPUParticles2D.emitting = true
