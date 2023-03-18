@@ -18,7 +18,7 @@ func _ready():
 		
 func level_completed():
 	print("level completed")
-	
+
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	
@@ -28,9 +28,6 @@ func _process(delta):
 	zoom.x = clamp(zoom.x, 0.5, 2)
 	zoom.y = clamp(zoom.y, 0.5, 2)
 	#$ColorRect.rect_position.x = -(1280*(zoom.x-1)) / 2
-	
-func respawn(expression):
-	pass
 	
 func _on_ZoomInButton_pressed():
 	zoom -= Vector2(0.25, 0.25)
