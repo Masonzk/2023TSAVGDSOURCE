@@ -3,12 +3,39 @@
 [ext_resource path="res://Scenes/Levels/Base.tscn" type="PackedScene" id=1]
 
 [node name="4" instance=ExtResource( 1 )]
-expressions = [ "x+1", "x*2", "x*3", "x-4", "x+5" ]
+expressions = [ "x+31", "x*2", "x*3", "x-6", "x+27" ]
 
-[node name="Emitter" parent="." index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+position = Vector2( 880, -456 )
+rotation = 0.907571
+scale = Vector2( 0.884615, 0.916667 )
+polygon = PoolVector2Array( 948.922, 571.481, 1054.71, 440.815, 897.929, 322.608 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" index="1"]
+position = Vector2( 0, 25 )
+polygon = PoolVector2Array( 984, 504, 1136, 504, 1136, 328 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Emitter" parent="." index="1"]
 position = Vector2( 160, 600 )
-emit_direction = Vector2( 1, -1 )
-emit_speed = 500.0
+emit_time = 4.0
+emit_direction = Vector2( 2, -1 )
+emit_speed = 410.0
+default_value = 7.0
 
-[node name="Collector" parent="." index="1"]
+[node name="Collector" parent="." index="2"]
 position = Vector2( 1088, 136 )
+desired_value = 45.0
+
+[node name="x+10" type="Polygon2D" parent="." index="6"]
+polygon = PoolVector2Array( 128, -64, 632, 768, 704, 768, 465.805, 374.79, 200, -64 )
+__meta__ = {
+"_edit_group_": true
+}
