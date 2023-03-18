@@ -10,6 +10,7 @@ font_data = ExtResource( 3 )
 
 [node name="4" instance=ExtResource( 1 )]
 expressions = [ "x+60", "x/2", "x*3", "x-5", "x+27" ]
+hint_value = "2 BUMPERS"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
