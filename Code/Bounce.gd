@@ -71,10 +71,10 @@ func drag():
 	if Input.is_action_just_released("mouse_left") and held:
 		held = false
 		Globals.holding = false
-		if in_trash:
-			get_parent().get_parent().get_parent().respawn_ball(expression)
-			$AnimationPlayer.play("destroy")
-			queue_free()
+	
+	if Input.is_action_just_pressed("mouse_right") and mouse_in and !held:
+		#Spawn trash icon
+		pass
 	
 	#Track mouse position
 	if held:
